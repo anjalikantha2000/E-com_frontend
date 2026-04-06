@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login Test</title>
+</head>
+<body>
+    <h1>Admin Login Test</h1>
+    <p>Click the button below to simulate admin login and navigate to the admin dashboard.</p>
+    <button onclick="simulateAdminLogin()">Login as Admin</button>
+
+    <script>
+        function simulateAdminLogin() {
+            // Set admin user data in localStorage
+            localStorage.setItem('userLoggedIn', 'true');
+            localStorage.setItem('userEmail', 'admin@anjalicart.com');
+            localStorage.setItem('userData', JSON.stringify({
+                email: 'admin@anjalicart.com',
+                name: 'Admin',
+                role: 'admin'
+            }));
+            
+            // Navigate to admin dashboard
+            window.location.href = 'http://localhost:5173/admin';
+        }
+    </script>
+</body>
+</html>

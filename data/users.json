@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1772622383079",
+    "name": "Admin",
+    "email": "admin@anjalicart.com",
+    "password": "$2a$10$dECjM7U/PWTd33xk.ThmpuuB8VPx6KUdmu/2fVxluwH7pQfbo/iq.",
+    "role": "admin",
+    "access": [
+      "home",
+      "products",
+      "contact",
+      "about",
+      "blog",
+      "cart",
+      "wishlist",
+      "profile",
+      "orders",
+      "admin"
+    ],
+    "wishlist": [],
+    "createdAt": "2026-03-04T11:06:23.079Z",
+    "_id": "1772622383079",
+    "lastLogin": "2026-03-04T11:22:12.580Z"
+  },
+  {
+    "id": "1772622606675",
+    "name": "Test User",
+    "email": "testuser@example.com",
+    "password": "$2a$10$DrnNKBWNhCfKtoVUZa7Uqe2MhzB88VfOuSxfRNLyTFXGnjCesYgx2",
+    "role": "user",
+    "access": [
+      "home",
+      "products",
+      "contact",
+      "about",
+      "blog",
+      "cart",
+      "wishlist",
+      "profile",
+      "orders"
+    ],
+    "wishlist": [],
+    "createdAt": "2026-03-04T11:10:06.675Z"
+  },
+  {
+    "id": "1772622822853",
+    "name": "Anjali",
+    "email": "anjaligmk2004@gmail.com",
+    "password": "$2a$10$T8bhbhM/d5tvYtFh5MKx3eAGaLMDR.ApY1bFj2Cx7n6PKOFtdPTw6",
+    "role": "user",
+    "access": [
+      "home",
+      "products",
+      "contact",
+      "about",
+      "blog",
+      "cart",
+      "wishlist",
+      "profile",
+      "orders"
+    ],
+    "wishlist": [],
+    "createdAt": "2026-03-04T11:13:42.853Z"
+  }
+]
