@@ -1,5 +1,4 @@
 // Payment Gateway Integration Service
-// This service demonstrates how to integrate with popular payment gateways
 
 // API Base URL
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
@@ -71,34 +70,6 @@ export const createRazorpayOrder = async (amount, currency = 'INR') => {
     return await response.json()
   } catch (error) {
     console.error('Razorpay order creation failed:', error)
-    throw error
-  }
-}
-
-// Fallback: Direct Razorpay API call
-const createRazorpayOrderDirect = async (amount, currency = 'INR') => {
-  try {
-    const response = await fetch('https://api.razorpay.com/v1/orders', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Basic ${btoa(`${PaymentConfig.razorpay.key_id}:${PaymentConfig.razorpay.key_secret}`)}`
-      },
-      body: JSON.stringify({
-        amount: amount * 100,
-        currency,
-        receipt: `order_${Date.now()}`
-      })
-    })
-    const data = await response.json()
-    return {
-      success: true,
-      orderId: data.id,
-      amount: data.amount,
-      currency: data.currency
-    }
-  } catch (error) {
-    console.error('Direct Razorpay order creation failed:', error)
     throw error
   }
 }
